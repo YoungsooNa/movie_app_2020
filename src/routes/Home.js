@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './Home.css';
 
 class Home extends React.Component {
-  state = {
+  state = { 
     isLoading: true,
     movies: [], 
   }
@@ -15,7 +15,7 @@ class Home extends React.Component {
       data: {
         data: {movies},
       },
-    } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating');
+    } = await axios.get('https://yts-proxy.now.sh/list_movies.json');
     this.setState({ movies, isLoading : false }); 
     
   }
