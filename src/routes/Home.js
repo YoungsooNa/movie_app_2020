@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie'
+import Spinner from 'react-bootstrap/Spinner'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './Home.css';
 
 class Home extends React.Component {
@@ -26,7 +28,9 @@ class Home extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
-            <span className="loader__text">'Loading...'</span>
+            <Spinner animation="border" role="status">
+              <span className="sr-only">Loading...</span>
+            </Spinner>
           </div>
           
         ): (
